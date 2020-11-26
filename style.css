@@ -59,6 +59,12 @@ h1{
     list-style: none;
 } */
 
+.company-name:hover{
+    color: #ED2E7A;
+}
+.text a{
+    text-decoration: none;
+}
 nav ul.list-items .item {
     display: inline-block;
     height: 64px;
