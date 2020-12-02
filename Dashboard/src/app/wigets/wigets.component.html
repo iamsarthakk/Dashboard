@@ -247,7 +247,14 @@
             <!-- Card Body -->
             <div class="card-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                    <!-- <canvas id="myAreaChart"></canvas> -->
+                    <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                       >
+                     </canvas>
                 </div>
             </div>
         </div>

@@ -24,10 +24,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
+    "@types/chart.js": "^2.9.28",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
     "font-awesome": "^4.7.0",
+    "ng2-charts": "^2.4.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
