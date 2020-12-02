@@ -1,0 +1,70 @@
+.header{
+    background-color: #002B3E;
+    float: left;
+}
+
+h1{
+    color: white;
+}
+
+.top-bar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    background-color: #00161F;
+    justify-content: space-between;
+    background-size: cover;
+}
+
+.logo{
+    height: 64px;
+    width: 64px; 
+} 
+.navbar-brand{
+    height: 24px;
+    width: 24px;
+}
+
+
+.text{
+    line-height: 64px;
+    padding: 0 16px 0 0;
+    display: block;
+}
+.company-name{
+    color: white;
+    vertical-align: middle;
+    position: relative;
+    top: 0px;
+}
+
+
+.company-name:hover{
+    color: #ED2E7A;
+}
+.text a{
+    text-decoration: none;
+}
+nav ul.list-items .item {
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+    text-align: center;
+}
+
+nav ul.list-items .item a span {
+    display: none;
+}
+ nav ul.list-items .item a svg {
+     
+     margin-top: 19px;
+    height: 24px;
+    width: 32px;
+    transition: fill .2s ease;
+    fill: #fff;
+}
+nav ul.list-items .item a :hover{
+    fill: #ED2E7A;
+}
