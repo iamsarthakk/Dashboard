@@ -15,6 +15,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserService } from './user-service.service';
 import { ChartsModule } from 'ng2-charts';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -33,7 +40,14 @@ import { ChartsModule } from 'ng2-charts';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

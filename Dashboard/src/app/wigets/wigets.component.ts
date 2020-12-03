@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartOptions } from 'chart.js';
 
 
 @Component({
@@ -21,7 +22,14 @@ export class WigetsComponent implements OnInit {
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
     {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
   ];
-  
+
+  public pieChartOptions: ChartOptions = {
+    responsive: true,
+  }
+  public pieChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
+  public pieChartData = [120, 150, 180, 90];
+  public pieChartType = 'pie';
+
   ngOnInit(): void {
   //   var myPieChart = new Chart(ctx, {
   //     type: 'doughnut',

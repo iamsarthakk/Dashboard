@@ -4,7 +4,7 @@
 .sidebar{
     background-color: #0f292f;
     background-size: cover;
-    width: 6.5rem;
+    /* width: 6.5rem; */
     min-height: 100vh;
     /* background-color: #ED2E7A; */
 }
@@ -14,11 +14,7 @@
     overflow: hidden;
 }
 
-/* @media (min-width: 768px){
-.sidebar {
-    width: 14rem!important;
-}
-} */
+
 
 .sidebar .nav-item {
     position: relative;
@@ -35,6 +31,7 @@
 
 @media (min-width: 768px){
 .sidebar .nav-item .nav-link {
+    /* position: relative; */
     display: block;
     width: 100%;
     text-align: left;
@@ -114,58 +111,6 @@
     top: 2px;
 }
 
-/* @media (min-width: 768px){
-.sidebar .nav-item .collapse, .sidebar .nav-item .collapsing {
-    margin: 0 1rem;
-}
-}
-@media (min-width: 768px){
-.sidebar .nav-item .collapse {
-    position: relative;
-    left: 0;
-    z-index: 1;
-    top: 0;
-    -webkit-animation: none;
-    animation: none;
-}
-}
-.sidebar .nav-item .collapse {
-    position: absolute;
-    left: calc(6.5rem + 1.5rem / 2);
-    z-index: 1;
-    top: 2px;
-}
-.animated--grow-in, .sidebar .nav-item .collapse {
-    -webkit-animation-name: growIn;
-    animation-name: growIn;
-    -webkit-animation-duration: .2s;
-    animation-duration: .2s;
-    -webkit-animation-timing-function: transform cubic-bezier(.18,1.25,.4,1),opacity cubic-bezier(0,1,.4,1);
-    animation-timing-function: transform cubic-bezier(.18,1.25,.4,1),opacity cubic-bezier(0,1,.4,1);
-}
-
-@media (min-width: 768px){
-.sidebar.toggled .nav-item .collapse .collapse-inner {
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,.15);
-    border-radius: .35rem;
-}
-}
-@media (min-width: 768px){
-.sidebar .nav-item .collapse .collapse-inner {
-    border-radius: 0;
-    box-shadow: none;
-}
-}
-.sidebar .nav-item .collapse .collapse-inner, .sidebar .nav-item .collapsing .collapse-inner {
-    padding: .5rem 0;
-    min-width: 10rem;
-    font-size: .85rem;
-    margin: 0 0 1rem 0;
-}
-.sidebar .nav-item .collapse .collapse-inner {
-    border-radius: .35rem;
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,.15);
-} */
 
 .sidebar .sidebar-card {
     display: flex;

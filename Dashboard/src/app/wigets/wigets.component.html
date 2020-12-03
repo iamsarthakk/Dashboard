@@ -205,20 +205,14 @@
           </div>
           <!-- Card Body -->
           <div class="card-body">
-              <div class="chart-pie pt-4 pb-4">
-                  <canvas id="myPieChart"></canvas>
+              <div class="">
+                <canvas height="540vh" baseChart
+                [data]="pieChartData"
+                [options]="pieChartOptions"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"></canvas>
               </div>
-              <div class="mt-4 text-center small">
-                  <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Direct
-                  </span>
-                  <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Social
-                  </span>
-                  <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Referral
-                  </span>
-              </div>
+              
           </div>
       </div>
   </div>
@@ -253,7 +247,7 @@
                         [labels]="barChartLabels"
                         [options]="barChartOptions"
                         [legend]="barChartLegend"
-                       >
+                        [chartType]="barChartType">
                      </canvas>
                 </div>
             </div>
@@ -273,9 +267,4 @@
     </div>
 </div>
 
-<!--Graph Plotting-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-<!-- Page level custom scripts -->
-<script src="demo/chart-area-demo.js"></script>
-<script src="demo/chart-pie-demo.js"></script>
