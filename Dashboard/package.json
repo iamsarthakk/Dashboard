@@ -28,6 +28,7 @@
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "@types/chart.js": "^2.9.28",
     "angular-font-awesome": "^3.1.2",
+    "angular2-chartjs": "^0.5.1",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
     "font-awesome": "^4.7.0",

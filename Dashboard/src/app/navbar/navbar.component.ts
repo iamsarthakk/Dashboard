@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ToggleService } from '../toggle.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,20 +7,24 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  @Output() menuState = new EventEmitter();
 
-  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
+
+constructor(private toggleService: ToggleService){
+
+}
+  opened: boolean = true;
+  showMenu = false; /* false by default, since hidden */
   
   ngOnInit(): void {
+   
   }
 
   toggleSideBar(){
-    this.toggleSideBarForMe.emit();
-
-    setTimeout( () =>{
-      window.dispatchEvent(
-        new Event('resize')
-      );
-    }, 300 );
+    console.log("inside toggleMenu");
+      this.showMenu = !this.showMenu;
+      this.menuState.emit(this.showMenu);
+    this.toggleService.showSidebar = false;
   }
 
 }

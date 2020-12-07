@@ -1,3 +1,7 @@
+.show-sidebar{
+    display: block;
+}
+
 .accordion {
     overflow-anchor: none;
 }
@@ -9,10 +13,7 @@
     /* background-color: #ED2E7A; */
 }
 
-.sidebar.toggled {
-    width: 0!important;
-    overflow: hidden;
-}
+
 
 
 

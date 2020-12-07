@@ -22,6 +22,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {ToggleService} from './toggle.service'
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatMenuModule,
     MatSidenavModule
   ],
-  providers: [UserService],
+  providers: [UserService, ToggleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
