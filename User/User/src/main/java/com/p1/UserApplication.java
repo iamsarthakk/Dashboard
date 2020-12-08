@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.p1.entity.User;
-import com.p1.repository.UserRepository;
+
 
 @SpringBootApplication
 public class UserApplication {
@@ -17,15 +17,6 @@ public class UserApplication {
 		SpringApplication.run(UserApplication.class, args);
 	}
 	
-	@Bean
-    CommandLineRunner init(UserRepository userRepository) {
-        return args -> {
-            Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
-                User user = new User(name, name.toLowerCase() + "@domain.com");
-                userRepository.save(user);
-            });
-            userRepository.findAll().forEach(System.out::println);
-        };
-    }
+
 
 }

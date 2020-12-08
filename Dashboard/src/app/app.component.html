@@ -1,10 +1,14 @@
 <app-navbar (menuState)='burgerClicked($event)'></app-navbar>
-<div class="container-fluid">      
-    <div class="row">
-       
-      <app-sidebar class="col-3 col-md-2 pl-0 side" [hidden]="subMenuState" ></app-sidebar>
-      <router-outlet></router-outlet>
-      <!-- <app-wigets class="col-9 col-md-10"></app-wigets> -->
+<div class="container-fluid  ml-0">      
+    <div class="row ">
+       <div  class="col-3 col-md-2 pl-0 side" [hidden]="subMenuState.toggle" >
+          <app-sidebar></app-sidebar>
+       </div>
+      <div  class="col-9 col-md-10 pl-0 ">
+        <!-- <div>{{subMenuState.col}}</div> -->
+        <router-outlet></router-outlet>
+      </div>
+      
     </div>
 </div>
 

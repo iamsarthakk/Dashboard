@@ -7,13 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dashboard';
-  subMenuState:boolean = false;
-
+  subMenuState:any = false;
+  col = 12;
   opened: boolean = true;
 
   
   burgerClicked(evnt: any){
     this.subMenuState = evnt;
-    console.log("inside burgerClicked: pls. change showMenu to be:",this.subMenuState);
+    // if(!this.subMenuState){
+    //   this.col=12;
+    // }
+    // else{
+    //   this.col=9;
+    // }
+    console.log("inside burgerClicked: pls. change showMenu to be:",this.subMenuState.toggle);
   }
 }

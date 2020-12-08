@@ -22,7 +22,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {ToggleService} from './toggle.service'
+import {ToggleService} from './toggle.service';
+import { EditUserComponent } from './edit-user/edit-user.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {ToggleService} from './toggle.service'
     WigetsComponent,
     HomeComponent,
     ContactComponent,
-    UserListComponent
+    UserListComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

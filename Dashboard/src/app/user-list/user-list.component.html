@@ -1,7 +1,6 @@
-<div class="container-fluid">      
+<div class="container-fluid  pl-4">      
   <div class="row">
-    <app-sidebar class="col-3 col-md-2 pl-0 side"></app-sidebar>
-    <div class="card my-5 col-9 col-md-10">
+    <div class="card my-5 col-12">
       <div class="card-body">
         <table class="table table-bordered table-striped">
           <thead class="thead-dark">
@@ -9,6 +8,8 @@
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -16,6 +17,12 @@
               <td>{{ user.id }}</td>
               <td>{{ user.name }}</td>
               <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+              <td ><button class="btn btn-default btn-sm" (click)="selectUser(user.id)">
+                <i class="fa fa-edit"></i>
+              </button> </td>
+              <td><button class="btn btn-default btn-sm" (click)="deleteUser(user.id)">
+                <i class="fa fa-trash"></i>
+              </button></td>
             </tr>
           </tbody>
         </table>
