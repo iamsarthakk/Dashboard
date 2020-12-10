@@ -79,9 +79,9 @@ public class UserController {
     }    
     /* It deletes record for the given id in URL and redirects to /viewemp */    
     @GetMapping("/deleteuser/{id}")    
-    public void delete(@PathVariable Long id){    
+    public String delete(@PathVariable Long id){    
 	    template.update("delete from user where id=?", id);    
-        
+        return "Data Deleted Succefully";
     }     
     private static final class UserMapper implements RowMapper<User> {
         public User mapRow(ResultSet rs, int rowNum) throws SQLException {

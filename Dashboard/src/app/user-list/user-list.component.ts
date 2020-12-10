@@ -27,6 +27,8 @@ export class UserListComponent implements OnInit {
   deleteUser(id: number) {
     if (confirm("Delete this product?")) {
       this.userService.deleteUser(id).subscribe(() => this.userService.findAll());
+      alert("Data Deleted Succeffully");
+      window.location.reload();
     }
   }
 }
