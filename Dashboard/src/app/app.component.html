@@ -4,7 +4,7 @@
        <div  class="col-3 col-md-2 pl-0 side" [hidden]="subMenuState.toggle" >
           <app-sidebar></app-sidebar>
        </div>
-      <div  class="col-9 col-md-10 pl-0 ">
+      <div  [ngClass]="{'col-12':subMenuState.toggle, 'col-9':!subMenuState.toggle, 'col-md-10':!subMenuState.toggle}  ">
         <!-- <div>{{subMenuState.col}}</div> -->
         <router-outlet></router-outlet>
       </div>

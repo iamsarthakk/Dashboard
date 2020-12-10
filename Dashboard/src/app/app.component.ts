@@ -14,12 +14,12 @@ export class AppComponent {
   
   burgerClicked(evnt: any){
     this.subMenuState = evnt;
-    // if(!this.subMenuState){
-    //   this.col=12;
-    // }
-    // else{
-    //   this.col=9;
-    // }
+    if(!this.subMenuState){
+      this.col=12;
+    }
+    else{
+      this.col=9;
+    }
     console.log("inside burgerClicked: pls. change showMenu to be:",this.subMenuState.toggle);
   }
 }

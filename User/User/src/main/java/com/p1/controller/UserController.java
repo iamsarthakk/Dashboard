@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.p1.dao.UserDao;
 import com.p1.entity.User;
 
 
@@ -68,12 +67,7 @@ public class UserController {
     	template.update("insert into user(name,email) values(?, ?)", p.getName(), p.getEmail());
     }
     
-//    @RequestMapping(value="/editusr/{id}")    
-//    public String edit(@PathVariable int id, Model m){    
-//        User emp=dao.getUserById(id);    
-//        m.addAttribute("command",emp);  
-//        return "empeditform";    
-//    }    
+
     /* It updates model object. */    
     @PostMapping("/editsave")    
     public void editsave(@RequestBody User p){    
