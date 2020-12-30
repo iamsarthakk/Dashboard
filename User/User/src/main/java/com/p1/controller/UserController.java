@@ -5,19 +5,14 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.p1.entity.User;
@@ -68,16 +63,15 @@ public class UserController {
     }
     
 
-    /* It updates model object. */    
+    /* It updates user object. */    
     @PostMapping("/editsave")    
     public void editsave(@RequestBody User p){    
     	System.out.println("Enter Edit");
     	System.out.println(p);
     	template.update("update user set name=?, email=? where id=?", p.getName(), p.getEmail(), p.getId());
-//    	String sql="update user set name='"+p.getName()+"', email="+p.getEmail()+"' where id="+p.getId()+"";    
-//	    template.update(sql);              
+           
     }    
-    /* It deletes record for the given id in URL and redirects to /viewemp */    
+    /* It deletes record for the given id in URL  */    
     @GetMapping("/deleteuser/{id}")    
     public String delete(@PathVariable Long id){    
 	    template.update("delete from user where id=?", id);    
