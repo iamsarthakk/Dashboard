@@ -4,3 +4,8 @@
     width: 6.5rem;
     min-height: 100vh;
 }
+
+.scroller {
+    overflow : scroll;
+    /* height : 300px; */
+}
